@@ -1,0 +1,44 @@
+/* Body styling */
+body {
+    background-color: yellow;
+    color: blue;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Light mode button */
+#btn {
+    background-color: rgb(102, 102, 227);
+    color: antiquewhite;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dark mode button */
+#dark {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Div for hover event */
+.div {
+    background-color: pink;
+    height: 100px;
+    width: 100px;
+    color: black;
+    margin: 50px auto;
+    padding: 50px;
+    border-radius: 10px;
+    border: 10px solid black;
+    text-align: center;
+    line-height: 1;
+    cursor: pointer;
+}

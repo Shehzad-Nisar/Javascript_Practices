@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai aur code | DOM</title>
+</head>
+<body>
+    <ul class="htmlUl">
+        <li>karachi</li>
+    </ul>
+
+    <script>
+        // -----------------------------
+        // 1️⃣ Using innerText
+        // -----------------------------
+        // - innerText directly sets the text inside the element.
+        // - It is simple and quick for small use cases.
+        // - But if the string contains HTML tags, they will be shown as plain text (not rendered).
+        function cityName(cityName) {
+            const cName = document.createElement("li");  // create <li> element
+            cName.innerText = `${cityName}`;             // set text inside <li>
+
+            const targetedUl = document.querySelector(".htmlUl"); // select ul
+            targetedUl.append(cName);                    // append li to ul
+        }
+
+        cityName("Lahore");
+        cityName("Faisalabad");
+
+
+        // -----------------------------
+        // 2️⃣ Using appendChild with createTextNode
+        // -----------------------------
+        // - createTextNode creates a text node explicitly.
+        // - appendChild then attaches that text node inside the <li>.
+        // - This is considered more "optimized" and safer for performance in big projects.
+        // - Useful when adding large amounts of data or preventing accidental HTML injection.
+        function cityNameOptimized(cityName) {
+            const cName = document.createElement("li");                  // create <li> element
+            cName.appendChild(document.createTextNode(cityName));        // attach text node inside <li>
+            document.querySelector(".htmlUl").appendChild(cName);        // append <li> to <ul>
+        }
+
+        cityNameOptimized("Rawalpindi");
+
+
+        //edit elements  Replace element with other element
+
+       const thirdCity =  document.querySelector("li:nth-child(3)");
+       const newli = document.createElement("li");
+       newli.textContent = "Peshawar";
+       thirdCity.replaceWith(newli);
+
+
+       // Replace element karachi with Karachi sindh;
+
+       const first = document.querySelector("li:nth-child(1)");
+
+       const newName =  document.createElement("li");
+       newName.textContent = "karachi sindh";
+       first.replaceWith(newName);
+
+
+       //Remove any element:
+
+       const last = document.querySelector("li:last-child");
+       last.remove();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

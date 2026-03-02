@@ -1,0 +1,29 @@
+
+button {
+    background-color: rgb(211, 90, 110);
+}
+
+#box1{
+    /* width: 50%;
+    height: 50%; */
+    background-color: rgb(206, 206, 79);
+    text-align: center;
+    font-size: medium;
+
+
+
+}
+
+.one{
+    background-color: rgb(158, 109, 109);
+}
+
+.light{
+    background-color: rgb(42, 4, 77);
+    color: wheat;
+}
+
+.dark{
+    background-color: wheat;
+    color: rgb(42, 4, 77);
+}

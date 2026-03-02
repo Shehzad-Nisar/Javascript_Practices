@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learning with chai and code</title>
+</head>
+<body style="background-color: rgb(42, 61, 4); color: antiquewhite;">
+
+    <div  class="parentNode" style="background-color: pink; color: black;">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+    </div >
+
+    <div id="password" style="background-color: #f8bbd0; color: #6a0dad;">
+    <div class="div2">elemet one</div>
+    <div class="div2">element two</div>
+    <div class="div2">element three</div>
+    </div>
+
+    <script>
+        // const parent = document.querySelector(".parentNode");
+        // // console.log(parent);
+        // // console.log(parent.children);
+        // // console.log(parent.firstElementChild.innerText);
+        // // console.log(parent.lastElementChild.innerText);
+
+        // // for (let i = 0 ; i< parent.children.length; i++){
+        // //     console.log(parent.children[i].innerText);
+        // //     parent.children[i].style.backgroundColor = 'orange';
+        // //     parent.style.color = "black";
+            
+        // // }
+
+        // // const oneDay = document.querySelector(".day");
+
+        // // console.log(oneDay.parentElement);
+        // // console.log(oneDay.nextElementSibling.innerText);
+        
+        // console.log("node:",parent.childNodes );
+
+        let btn = document.createElement("button");
+        btn.innerText = "click me!!"
+        btn.className = "new button";
+        btn.style.backgroundColor = "#4169e1";
+        btn.style.color = "#ffffff";
+        btn.id = Math.round(Math.random()*10 + 1);
+        console.log(btn.id) ;
+        
+        //custom attribute set 
+        btn.setAttribute("name", "button");
+        
+
+        // add button inside the div at the begining ;
+
+        let divs = document.querySelector(".parentNode");
+        divs.prepend(btn);
+
+        // add button at the end of the div
+
+        let p = document.createElement("p");
+        p.innerText = "Add text at the end of the div";
+
+        divs.append(p);
+        
+        // add h1 at before the node 
+
+        let heading1 = document.createElement("h1");
+        heading1.innerText = "add h1 before the the node outside the node"
+
+        divs.before(heading1);
+
+        let heading2 = document.createElement('h2');
+        heading2.innerText = "add h2 after the node and will be outside the node ";
+        divs.after(heading2);
+
+
+        let myNode = document.createElement("div");
+        myNode.className = "myNodeClass";
+        myNode.id = Math.round(Math.random()*10 +1);
+        myNode.setAttribute("title","myNOdeTitle");
+        
+        // myNode.innerText = "javascript with shehzad Nisar";
+
+        // let bgm = document.querySelector("#password");
+        // bgm.append(myNode);
+
+
+        let bgm = document.createTextNode("Learn javascript with shehzad Nisar");
+        myNode.appendChild(bgm);
+        document.body.appendChild(myNode);
+
+        let targetedDiv = document.getElementsByClassName("parentNode")[0];
+        targetedDiv.appendChild(myNode);
+
+        
+
+       
+    </script>
+
+</body>
+</html>
