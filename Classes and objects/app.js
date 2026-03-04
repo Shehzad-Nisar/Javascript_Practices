@@ -42,7 +42,7 @@ class oops extends teacher {
     }
 }
 
-let t1 = new oops("Mukesh Kumar", "ICS-II", "Gulshan E Iqbal");
+let t1 = new oops("Mukesh Kumar Rathi", "ICS-II", "Gulshan E Iqbal");
 
 
 
@@ -69,7 +69,7 @@ class admin extends user {
     }
 }
 
-// Error handling in js
+// Error handling in js 
 let a = 3; 
 let b = 5; 
 console.log('a= ', a);
