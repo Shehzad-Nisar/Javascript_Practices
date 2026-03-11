@@ -1,0 +1,16 @@
+body{
+    background: black;
+    color: white;
+}
+
+h1 {
+    background: rgb(226, 57, 57);
+    text-align: center;
+    border: black;
+    
+}
+
+h2 {
+    background: slategray;
+    color: black;
+}

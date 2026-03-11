@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sync vs Async JavaScript</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    margin:40px;
+    background:#f5f7fb;
+}
+
+h1{
+    text-align:center;
+}
+
+.section{
+    background:white;
+    padding:20px;
+    margin-bottom:25px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.code{
+    background:#1e1e1e;
+    color:#00ff9d;
+    padding:15px;
+    border-radius:8px;
+    font-family: monospace;
+    margin-top:10px;
+}
+
+.output{
+    background:#eef3ff;
+    padding:10px;
+    border-left:5px solid #4a6cf7;
+    margin-top:10px;
+}
+
+.callback{
+    background:#fff3cd;
+    padding:15px;
+    border-radius:8px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>JavaScript Synchronous vs Asynchronous</h1>
+
+<div class="section">
+
+<h2>1️- Synchronous JavaScript</h2>
+
+<p>
+Synchronous code runs line by line. Each task must finish before the next task starts.
+</p>
+
+<div class="code">
+console.log("Start");
+
+console.log("Task 1");
+
+console.log("Task 2");
+
+console.log("End");
+</div>
+
+<div class="output">
+Output:<br>
+Start<br>
+Task 1<br>
+Task 2<br>
+End
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>2️- Asynchronous JavaScript</h2>
+
+<p>
+Asynchronous code allows some tasks to run later without blocking the rest of the program.
+</p>
+
+<div class="code">
+console.log("Start");
+
+setTimeout(function(){
+    console.log("Task after 2 seconds");
+},2000);
+
+console.log("End");
+</div>
+
+<div class="output">
+Output:<br>
+Start<br>
+End<br>
+Task after 2 seconds
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>3️-  What is setTimeout?</h2>
+
+<p>
+setTimeout executes a function after a specific delay.
+</p>
+
+<div class="code">
+setTimeout(function(){
+    console.log("Hello after 3 seconds");
+},3000);
+</div>
+
+</div>
+
+<div class="section callback">
+
+<h2>4️-  Callback Hell</h2>
+
+<p>
+Callback Hell happens when many asynchronous operations are nested inside each other.
+This makes the code difficult to read and maintain.
+</p>
+
+<div class="code">
+setTimeout(function(){
+
+    console.log("Step 1");
+
+    setTimeout(function(){
+
+        console.log("Step 2");
+
+        setTimeout(function(){
+
+            console.log("Step 3");
+
+            setTimeout(function(){
+
+                console.log("Step 4");
+
+            },1000);
+
+        },1000);
+
+    },1000);
+
+},1000);
+</div>
+
+<p>
+This pyramid-shaped structure is called <strong>Callback Hell</strong>.
+</p>
+
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
