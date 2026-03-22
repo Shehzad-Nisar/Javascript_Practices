@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main-div">
+        <h1 class="heading">Global Currency Converter</h1>
+        <p class="subheading"><i>Leading the world in currency information and global transfers for 30+ years</i></p>
+
+        <form id="converterForm">
+
+            <!-- From Section -->
+            <div class="currency-row">
+                <div class="input-group">
+                    <label for="amountFrom">From</label>
+                    <input type="number" id="amountFrom" placeholder="100">
+                </div>
+
+                <div class="input-group">
+                    <label for="currencyFrom">Currency</label>
+                    <select id="currencyFrom">
+                        <option value="USD">USD</option>
+                        <option value="PKR">PKR</option>
+                        <option value="INR">INR</option>
+                        <option value="EUR">EUR</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Swap Button -->
+            <button type="button" id="swap">⇄</button>
+
+            <!-- To Section -->
+            <div class="currency-row">
+                <div class="input-group">
+                    <label for="amountTo">To</label>
+                    <input type="number" id="amountTo" placeholder="100">
+                </div>
+
+                <div class="input-group">
+                    <label for="currencyTo">Currency</label>
+                    <select id="currencyTo">
+                        <option value="USD">USD</option>
+                        <option value="PKR">PKR</option>
+                        <option value="INR">INR</option>
+                        <option value="EUR">EUR</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Convert Button -->
+            <button type="submit" id="convertBtn">Convert</button>
+            
+            <!-- Result -->
+            <h3 id="result"></h3>
+
+        </form>
+    </div>
+</body>
+</html>
