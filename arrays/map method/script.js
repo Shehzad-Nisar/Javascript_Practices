@@ -6,17 +6,24 @@ let todos = [
 
 ]
 
-const updateToDo=(ID,todo)=>{
-  const newarray = (todos.map((prevobj)=>prevobj.id === ID ? todo: prevobj))
-  console.log('before:',todos)
-  todos = newarray;
+// const updateToDo=(ID,todo)=>{
+//   const newarray = (todos.map((prevobj)=>prevobj.id === ID ? todo: prevobj))
+//   console.log('before:',todos)
+//   todos = newarray;
   
-  console.log('after',newarray)
+//   console.log('after',newarray)
+// }
 
+// updateToDo(2, {id:2,text:"New object is inserted",toggle: true})
 
+// toggle to do 
+const toggleTodo=(id)=>{
+  const newarray = (todos.map((prevobj)=> prevobj.id === id ? {...prevobj, toggle: !prevobj.toggle} : prevobj))
+  todos = newarray; 
 
 }
 
-updateToDo(2, {id:2,text:"New object is inserted",toggle: true})
+toggleTodo(3);
+console.log(todos)
 
 
