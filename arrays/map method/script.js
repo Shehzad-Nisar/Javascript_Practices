@@ -6,11 +6,21 @@ const todos = [
 ]
 
 
+//updatedTodo function
 const updateTodo = (id,todo)=>{
   const newarray = todos.map((eachTodo)=>eachTodo.id===id?{...eachTodo,...todo}:eachTodo);
   return newarray;
 }
 
-const var1 = updateTodo(2,{msg:"updated todo 2", completed: false});
+const var1 = updateTodo(2,{msg:"updated todo 2"});
 console.log(var1)
+
+//deletedTodo function:
+
+const deletedTodo=(id)=>{
+  return todos.filter((eachTodo)=>eachTodo.id!=id?eachTodo:'')
+}
+
+const var2= deletedTodo(1);
+console.log("after deleted",var2);
 
