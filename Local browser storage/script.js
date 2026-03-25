@@ -1,31 +1,14 @@
-const data = document.querySelector("#data");
-const getData = document.querySelector("#getData");
-
-
-
-localStorage.setItem("name","shehzad nisar");
-const name = localStorage.getItem("name");
-
-// for an array: 
-let todos = [
-    {id:1, text: 'hello from one', day: 'friday'},
-    {id:2, text: 'hello from two', day: 'saturday'},
-    {id:3, text: 'hello from three', day: 'sunday'}
+const todos = [
+    {id: Date.now(),msg :"data of todo1",completed:true},
+    {id: Date.now(),msg :"data of todo2",completed:false},
+    {id: Date.now(),msg :"data of todo3",completed:true},
+    {id: Date.now(),msg :"data of todo4",completed:false}
 ]
 
+localStorage.clear()
 
-localStorage.setItem("data", JSON.stringify(todos));
+localStorage.setItem("todosData",JSON.stringify(todos));
 
-const arraydata = localStorage.getItem('data');
-data.style.color = 'white';
-data.innerText = arraydata;
+const data = JSON.parse(localStorage.getItem("todosData"));
 
-const getitem = localStorage.getItem("data")
-
-getData.innerText = getitem;
-getData.style.color = "white"
-
-//-------------------------------------------------------------//
-
-
-
+console.log(data)
