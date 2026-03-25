@@ -30,3 +30,5 @@ const add=()=>{
 
 add();
 console.log(str)
+
+localStorage.removeItem("todos")
