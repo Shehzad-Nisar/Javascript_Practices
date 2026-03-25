@@ -11,4 +11,22 @@ localStorage.setItem("todosData",JSON.stringify(todos));
 
 const data = JSON.parse(localStorage.getItem("todosData"));
 
-console.log(data)
+console.log(data);
+
+
+///
+
+let str = "      ";
+
+const add=()=>{
+    if(str.trim()!= ""){
+        console.log('yes');
+        str= ""
+    }else{
+        console.log("no")
+    }
+
+}
+
+add();
+console.log(str)
