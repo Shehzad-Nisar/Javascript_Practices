@@ -1,29 +1,16 @@
-let todos = [
-    {id:1,text:"first task is coding",toggle: false},
-    {id:2,text:"Second task is execrising",toggle: false},
-    {id:3,text:"Third task is execrising",toggle: false},
-     
-
+const todos = [
+  {id:1,msg:"original todo 1",completed: false},
+  {id:2,msg:"original todo 2",completed: true},
+  {id:3,msg:"original todo 3",completed: false},
+  {id:4,msg:"original todo 4",completed: true}
 ]
 
-// const updateToDo=(ID,todo)=>{
-//   const newarray = (todos.map((prevobj)=>prevobj.id === ID ? todo: prevobj))
-//   console.log('before:',todos)
-//   todos = newarray;
-  
-//   console.log('after',newarray)
-// }
 
-// updateToDo(2, {id:2,text:"New object is inserted",toggle: true})
-
-// toggle to do 
-const toggleTodo=(id)=>{
-  const newarray = (todos.map((prevobj)=> prevobj.id === id ? {...prevobj, toggle: !prevobj.toggle} : prevobj))
-  todos = newarray; 
-
+const updateTodo = (id,todo)=>{
+  const newarray = todos.map((eachTodo)=>eachTodo.id===id?{...eachTodo,...todo}:eachTodo);
+  return newarray;
 }
 
-toggleTodo(3);
-console.log(todos)
-
+const var1 = updateTodo(2,{msg:"updated todo 2", completed: false});
+console.log(var1)
 
