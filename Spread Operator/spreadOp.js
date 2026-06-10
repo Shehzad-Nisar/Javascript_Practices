@@ -14,7 +14,7 @@ const obj1 = {
     name: 'ali ',
     age:33
 }
-const obj2 = {gFather: 'ali khan',age: 66,...obj1,fName:'muhammad',age: 53};
+const obj2 = {gFather: 'ali khan',age: 66,...obj1,fName:'muhammad',age_: 53};
 
 console.log(obj2)
 
@@ -22,3 +22,20 @@ console.log(obj2)
 const str = 'helloBaltistan';
 const newstr= [...str];
 console.log(newstr)
+
+const arr1 = [1,4,3,4];
+
+const arr2 = [89,10,...arr1,20,40];
+
+console.log("now arrays:");
+console.log(arr1,arr2)
+
+
+const userInfo = {
+    name: "shafnain",
+    age:25
+}
+
+const final ={usename:"shafNain2",...userInfo}
+
+console.log(final)
