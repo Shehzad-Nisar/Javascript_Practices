@@ -21,3 +21,14 @@ getData(2223,()=>{
 });
 
 
+
+// some practices 
+
+function greet(name, callback) {
+    callback(name);
+}
+
+greet("Shehzad", (person) => {
+    console.log(person);
+});
+
