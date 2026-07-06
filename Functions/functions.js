@@ -1,5 +1,16 @@
-for (let i = 0 ; i<=200; i++){
-    console.log("Neen ka patta kdwa hai");
-    console.log("Sada bhai humara badwa hai");
+
+
+const reversedFunc = (arr)=>{
+    let reversed = [];
+
+    for(let i=arr.length-1; i>=0; i--){
+        reversed.push(arr[i]);
+    }
+    
+    return reversed;
+
 
 }
+
+console.log(reversedFunc([1,2,3,4]))
+
